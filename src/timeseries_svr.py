@@ -34,8 +34,9 @@ from mealpy.utils.problem import Problem
 
 class TimeSeriesSVR(Problem):
     def __init__(self, lb, ub, minmax, data=None, name="TimeSeries Support Vector Regression", **kwargs):
-        super().__init__(lb, ub, minmax, data=data, **kwargs)  ## data is needed because when initialize the Problem class, we need to check the output of fitness
+        ## data is assigned first because when initialize the Problem class, we need to check the output of fitness
         self.data = data
+        super().__init__(lb, ub, minmax, data=data, **kwargs)
         self.name = name
 
     def decode_solution(self, solution):

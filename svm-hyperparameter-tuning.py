@@ -5,8 +5,8 @@
 # --------------------------------------------------%
 
 from sklearn.preprocessing import LabelEncoder
-from models.timeseries_svr import TimeSeriesSVR
-from models.utils import ts_util
+from src.timeseries_svr import TimeSeriesSVR
+from src.utils import ts_util
 from mealpy.evolutionary_based import FPA
 from permetrics.regression import RegressionMetric
 
